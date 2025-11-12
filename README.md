@@ -4,7 +4,7 @@
 
 A modern, responsive portfolio website built with Next.js, showcasing video editing services for Instagram Reels and YouTube Shorts.
 
-![AURA FARMERING Portfolio](/.github/images/img_main.png)
+
 
 ## 🚀 Live Demo
 [View Live Website](https://checking-lovat-omega.vercel.app)

@@ -4,7 +4,7 @@
 
 This is a modern, responsive portfolio website built for video editors specializing in Instagram Reels and YouTube Shorts. The website showcases professional video editing services with stunning animations and interactive elements.
 
-![Website Preview](/.github/images/img_main.png)
+
 
 ## 🚀 Live Demo
 - **Website**: [AURA FARMERING Portfolio](https://checking-lovat-omega.vercel.app)
