@@ -7,7 +7,7 @@ A modern, responsive portfolio website built with Next.js, showcasing video edit
 ![AURA FARMERING Portfolio](/.github/images/img_main.png)
 
 ## 🚀 Live Demo
-[View Live Website](https://aura-farmering.vercel.app)
+[View Live Website](https://checking-lovat-omega.vercel.app)
 
 ## ✨ Features
 
@@ -113,7 +113,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - **Email**: aura.farmering@example.com
 - **GitHub**: [@sarvast](https://github.com/sarvast)
-- **Website**: [AURA FARMERING](https://aura-farmering.vercel.app)
+- **Website**: [AURA FARMERING](https://checking-lovat-omega.vercel.app)
 
 ---
 
