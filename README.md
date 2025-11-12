@@ -4,8 +4,6 @@
 
 A modern, responsive portfolio website built with Next.js, showcasing video editing services for Instagram Reels and YouTube Shorts.
 
-
-
 ## 🚀 Live Demo
 [View Live Website](https://checking-lovat-omega.vercel.app)
 
