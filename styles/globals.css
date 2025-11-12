@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.translate-z-0 {
+  transform: translateZ(0px);
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  background-color: #f13024;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+  color: #f13024;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary overflow-hidden leading-relaxed;
+  }
+  .page {
+    @apply w-full h-screen overflow-hidden;
+  }
+  .h1 {
+    @apply text-[28px] xs:text-[32px] sm:text-[40px] md:text-[50px] lg:text-[60px] leading-[1.1] xs:leading-[1.12] md:leading-[1.15] mb-6 sm:mb-8 font-extrabold tracking-tight;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .h2 {
+    @apply text-[24px] xs:text-[28px] sm:text-[35px] md:text-[45px] lg:text-[54px] leading-[1.15] xs:leading-[1.18] md:leading-[1.2] mb-3 sm:mb-4 font-bold tracking-tight;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  p {
+    @apply leading-[1.8] text-white/60 font-light;
+  }
+  .btn,
+  .input {
+    @apply h-[52px];
+  }
+  .input {
+    @apply w-full h-[52px] rounded-lg pl-6;
+  }
+  .input,
+  .textarea {
+    @apply bg-transparent outline-none focus:ring-1 focus:ring-accent border border-white/20 placeholder:text-white/30 placeholder:font-light;
+  }
+  .textarea {
+    @apply w-full h-[180px] p-6 rounded-lg resize-none;
+  }
+}
