@@ -1,12 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import { Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const workSlides = {
   slides: [
@@ -90,19 +89,18 @@ const WorkSlider = () => {
   return (
     <Swiper
       spaceBetween={16}
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Pagination]}
-      className="h-[450px] xs:h-[500px] sm:h-[550px] md:h-[600px] lg:h-[620px] xl:h-[640px] 2xl:h-[680px] pb-12"
-      style={{ paddingBottom: '48px' }}
+      navigation={true}
+      loop={true}
+      modules={[Navigation]}
+      className="h-[500px] xs:h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[800px]"
+      style={{ paddingBottom: '20px' }}
     >
       {workSlides.slides.map((slide, i) => (
         <SwiperSlide key={i}>
           <div className="flex items-center justify-center h-full">
             {slide.videos.map((video, videoI) => (
               <div
-                className="relative rounded-lg overflow-hidden group w-full max-w-[240px] xs:max-w-[260px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[400px] mx-auto shadow-xl"
+                className="relative rounded-lg overflow-hidden group w-full max-w-[220px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[320px] xl:max-w-[340px] 2xl:max-w-[380px] mx-auto shadow-xl video-card"
                 key={videoI}
                 style={{ aspectRatio: video.isLocalVideo ? '16/9' : '9/16' }}
               >

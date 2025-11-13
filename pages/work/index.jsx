@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 import Bulb from "../../components/Bulb";
 import Circles from "../../components/Circles";
@@ -6,13 +7,24 @@ import WorkSlider from "../../components/WorkSlider";
 import { fadeIn } from "../../variants";
 
 const Work = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-primary/30 pt-6 xs:pt-8 sm:pt-12 md:pt-16 pb-24 xs:pb-28 sm:pb-32 md:pb-36 lg:py-36 xl:h-full xl:flex xl:items-center xl:pb-0">
+    <div className="min-h-screen bg-primary/30 pt-6 xs:pt-8 sm:pt-12 md:pt-16 pb-32 xs:pb-36 sm:pb-40 md:pb-44 lg:pb-48">
       <Circles />
       <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12 max-w-7xl">
         <div className="flex flex-col xl:flex-row gap-x-6 lg:gap-x-8 xl:gap-x-10">
           {/* text */}
-          <div className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-6 sm:mb-8 md:mb-10 xl:mb-0">
+          <div 
+            className="text-center flex xl:w-[30vw] flex-col lg:text-left mb-6 sm:mb-8 md:mb-10 xl:mb-0 transition-opacity duration-300"
+            style={{ opacity: Math.max(0, 1 - scrollY / 200) }}
+          >
             <motion.h2
               variants={fadeIn("up", 0.2)}
               initial="hidden"
@@ -41,12 +53,15 @@ const Work = () => {
             animate="show"
             exit="hidden"
             className="w-full xl:max-w-[65%] 2xl:max-w-[60%] mb-8 sm:mb-10 md:mb-12 xl:mb-0"
+            style={{ transform: `translateY(-${Math.min(scrollY * 0.3, 80)}px)` }}
           >
             <WorkSlider />
           </motion.div>
         </div>
       </div>
-      <Bulb />
+      <div style={{ opacity: Math.max(0, 1 - scrollY / 200) }}>
+        <Bulb />
+      </div>
     </div>
   );
 };
