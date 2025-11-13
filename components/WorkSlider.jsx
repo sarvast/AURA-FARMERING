@@ -102,7 +102,7 @@ const WorkSlider = () => {
           <div className="flex items-center justify-center h-full">
             {slide.videos.map((video, videoI) => (
               <div
-                className="relative rounded-lg overflow-hidden group w-full max-w-[240px] xs:max-w-[260px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[400px] mx-auto shadow-xl video-card"
+                className="relative rounded-lg overflow-hidden group w-full max-w-[240px] xs:max-w-[260px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[400px] mx-auto shadow-xl"
                 key={videoI}
                 style={{ aspectRatio: video.isLocalVideo ? '16/9' : '9/16' }}
               >

@@ -53,10 +53,4 @@
   }
 }
 
-.swiper-slide {
-  touch-action: pan-y pinch-zoom;
-}
 
-.video-card {
-  touch-action: manipulation;
-}
