@@ -30,6 +30,7 @@ const Layout = ({ children }) => {
         />
         <meta name="author" content="AURA FARMERING" />
         <meta name="theme-color" content="#f13024" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, maximum-scale=5.0" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
