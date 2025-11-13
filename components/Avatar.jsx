@@ -4,7 +4,7 @@ const Avatar = () => {
   return (
     <div className="flex max-w-none pointer-events-none select-none opacity-100">
       <Image
-        src="/avatar1.png"
+        src="/avatar.png"
         alt="avatar"
         width={737}
         height={678}

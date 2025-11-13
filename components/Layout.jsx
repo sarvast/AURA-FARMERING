@@ -33,20 +33,20 @@ const Layout = ({ children }) => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://checking-lovat-omega.vercel.app/" />
+        <meta property="og:url" content="https://checking-sarvasts-projects-f43a84e0.vercel.app/" />
         <meta property="og:title" content="AURA FARMERING | Professional Video Editor" />
         <meta property="og:description" content="Professional Video Editor for Instagram Reels, YouTube Shorts, and viral social media content. 500+ Videos Created | 10M+ Views Generated" />
-        <meta property="og:image" content="https://checking-lovat-omega.vercel.app/preview.jpg" />
+        <meta property="og:image" content="https://checking-sarvasts-projects-f43a84e0.vercel.app/preview.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="AURA FARMERING Portfolio" />
         
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://checking-lovat-omega.vercel.app/" />
+        <meta property="twitter:url" content="https://checking-sarvasts-projects-f43a84e0.vercel.app/" />
         <meta property="twitter:title" content="AURA FARMERING | Professional Video Editor" />
         <meta property="twitter:description" content="Professional Video Editor for Instagram Reels, YouTube Shorts, and viral social media content." />
-        <meta property="twitter:image" content="https://checking-lovat-omega.vercel.app/preview.jpg" />
+        <meta property="twitter:image" content="https://checking-sarvasts-projects-f43a84e0.vercel.app/preview.jpg" />
       </Head>
 
       <TopLeftImg />

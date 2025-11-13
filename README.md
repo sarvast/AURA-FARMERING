@@ -5,7 +5,7 @@
 A modern, responsive portfolio website built with Next.js, showcasing video editing services for Instagram Reels and YouTube Shorts.
 
 ## 🚀 Live Demo
-[View Live Website](https://checking-lovat-omega.vercel.app)
+[View Live Website](https://checking-sarvasts-projects-f43a84e0.vercel.app/)
 
 ## ✨ Features
 
@@ -111,7 +111,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - **Email**: aura.farmering@example.com
 - **GitHub**: [@sarvast](https://github.com/sarvast)
-- **Website**: [AURA FARMERING](https://checking-lovat-omega.vercel.app)
+- **Website**: [AURA FARMERING](https://checking-sarvasts-projects-f43a84e0.vercel.app/)
 
 ---
 

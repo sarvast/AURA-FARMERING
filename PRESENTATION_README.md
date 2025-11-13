@@ -7,7 +7,7 @@ This is a modern, responsive portfolio website built for video editors specializ
 
 
 ## 🚀 Live Demo
-- **Website**: [AURA FARMERING Portfolio](https://checking-lovat-omega.vercel.app)
+- **Website**: [AURA FARMERING Portfolio](https://checking-sarvasts-projects-f43a84e0.vercel.app/)
 - **GitHub**: [Repository Link](https://github.com/sarvast/AURA-FARMERING)
 
 ---
@@ -462,7 +462,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Developer**: AURA FARMERING Team
 - **Email**: aura.farmering@example.com
 - **GitHub**: [@sarvast](https://github.com/sarvast)
-- **Website**: [AURA FARMERING](https://checking-lovat-omega.vercel.app)
+- **Website**: [AURA FARMERING](https://checking-sarvasts-projects-f43a84e0.vercel.app/)
 
 ---
 
