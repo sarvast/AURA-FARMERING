@@ -14,7 +14,7 @@ const workSlides = {
       videos: [
         {
           title: "Explore the Ladakh",
-          thumbnail: "/thumb1.jpg",
+          thumbnail: "/explore the laddakh thumbnail.jpg",
           videoUrl: "/Explore the laddakh.mp4",
           isLocalVideo: true,
         },
