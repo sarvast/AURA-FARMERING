@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { BsArrowRight } from "react-icons/bs";
-import { Navigation } from "swiper";
+import { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 const workSlides = {
   slides: [
@@ -90,10 +91,13 @@ const WorkSlider = () => {
     <Swiper
       spaceBetween={16}
       navigation={true}
+      pagination={{
+        clickable: true,
+      }}
       loop={true}
-      modules={[Navigation]}
-      className="h-[500px] xs:h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[800px]"
-      style={{ paddingBottom: '20px' }}
+      modules={[Navigation, Pagination]}
+      className="h-[500px] xs:h-[550px] sm:h-[600px] md:h-[650px] lg:h-[700px] xl:h-[750px] 2xl:h-[800px] pb-16"
+      style={{ paddingBottom: '64px' }}
     >
       {workSlides.slides.map((slide, i) => (
         <SwiperSlide key={i}>
@@ -115,6 +119,13 @@ const WorkSlider = () => {
                       controls
                       className="w-full h-full object-cover"
                       poster={video.thumbnail}
+                      onLoadedMetadata={(e) => {
+                        e.target.addEventListener('fullscreenchange', () => {
+                          if (document.fullscreenElement) {
+                            screen.orientation?.lock('portrait').catch(() => {});
+                          }
+                        });
+                      }}
                     />
                     
                     <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4 bg-black/50 rounded px-2 py-1">
