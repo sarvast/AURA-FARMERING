@@ -21,6 +21,7 @@
 @layer base {
   body {
     @apply bg-secondary overflow-hidden leading-relaxed;
+    overscroll-behavior: auto;
   }
   .page {
     @apply w-full h-screen overflow-hidden;
@@ -50,4 +51,12 @@
   .textarea {
     @apply w-full h-[180px] p-6 rounded-lg resize-none;
   }
+}
+
+.swiper-slide {
+  touch-action: pan-y pinch-zoom;
+}
+
+.video-card {
+  touch-action: manipulation;
 }
