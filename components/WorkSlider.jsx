@@ -13,9 +13,10 @@ const workSlides = {
     {
       videos: [
         {
-          title: "Instagram Reel 1",
+          title: "Explore the Ladakh",
           thumbnail: "/thumb1.jpg",
-          videoUrl: "https://www.youtube.com/embed/VIDEO_ID_1",
+          videoUrl: "/Explore the laddakh.mp4",
+          isLocalVideo: true,
         },
       ],
     },
@@ -103,14 +104,42 @@ const WorkSlider = () => {
               <div
                 className="relative rounded-lg overflow-hidden group w-full max-w-[240px] xs:max-w-[260px] sm:max-w-[300px] md:max-w-[320px] lg:max-w-[340px] xl:max-w-[360px] 2xl:max-w-[400px] mx-auto shadow-xl"
                 key={videoI}
-                style={{ aspectRatio: '9/16' }}
+                style={{ aspectRatio: video.isLocalVideo ? '16/9' : '9/16' }}
               >
-                <Link
-                  href={video.videoUrl}
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  className="block w-full h-full"
-                >
+                {video.isLocalVideo ? (
+                  <div className="block w-full h-full cursor-pointer" onClick={() => {
+                    const videoElement = document.createElement('video');
+                    videoElement.src = video.videoUrl;
+                    videoElement.controls = true;
+                    videoElement.autoplay = true;
+                    videoElement.style.width = '100%';
+                    videoElement.style.height = '100%';
+                    videoElement.style.objectFit = 'cover';
+                    
+                    const modal = document.createElement('div');
+                    modal.style.position = 'fixed';
+                    modal.style.top = '0';
+                    modal.style.left = '0';
+                    modal.style.width = '100%';
+                    modal.style.height = '100%';
+                    modal.style.backgroundColor = 'rgba(0,0,0,0.9)';
+                    modal.style.zIndex = '9999';
+                    modal.style.display = 'flex';
+                    modal.style.alignItems = 'center';
+                    modal.style.justifyContent = 'center';
+                    modal.onclick = () => document.body.removeChild(modal);
+                    
+                    modal.appendChild(videoElement);
+                    document.body.appendChild(modal);
+                  }}>
+                ) : (
+                  <Link
+                    href={video.videoUrl}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="block w-full h-full"
+                  >
+                )}
                   {/* thumbnail */}
                   <div className="relative w-full h-full">
                     <Image
@@ -138,7 +167,11 @@ const WorkSlider = () => {
                   <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4">
                     <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
                   </div>
-                </Link>
+                {video.isLocalVideo ? (
+                  </div>
+                ) : (
+                  </Link>
+                )}
               </div>
             ))}
           </div>
