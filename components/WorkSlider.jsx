@@ -119,19 +119,6 @@ const WorkSlider = () => {
                       controls
                       className="w-full h-full object-cover"
                       poster={video.thumbnail}
-                      ref={(el) => {
-                        if (el) {
-                          el.addEventListener('fullscreenchange', () => {
-                            if (document.fullscreenElement === el) {
-                              if (screen.orientation && screen.orientation.lock) {
-                                screen.orientation.lock('portrait-primary').catch(() => {
-                                  screen.orientation.lock('portrait').catch(() => {});
-                                });
-                              }
-                            }
-                          });
-                        }
-                      }}
                     />
                     
                     <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4 bg-black/50 rounded px-2 py-1">
