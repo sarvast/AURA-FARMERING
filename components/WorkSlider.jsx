@@ -119,12 +119,18 @@ const WorkSlider = () => {
                       controls
                       className="w-full h-full object-cover"
                       poster={video.thumbnail}
-                      onLoadedMetadata={(e) => {
-                        e.target.addEventListener('fullscreenchange', () => {
-                          if (document.fullscreenElement) {
-                            screen.orientation?.lock('portrait').catch(() => {});
-                          }
-                        });
+                      ref={(el) => {
+                        if (el) {
+                          el.addEventListener('fullscreenchange', () => {
+                            if (document.fullscreenElement === el) {
+                              if (screen.orientation && screen.orientation.lock) {
+                                screen.orientation.lock('portrait-primary').catch(() => {
+                                  screen.orientation.lock('portrait').catch(() => {});
+                                });
+                              }
+                            }
+                          });
+                        }
                       }}
                     />
                     
