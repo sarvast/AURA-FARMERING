@@ -107,76 +107,15 @@ const WorkSlider = () => {
                 style={{ aspectRatio: video.isLocalVideo ? '16/9' : '9/16' }}
               >
                 {video.isLocalVideo ? (
-                  <div className="block w-full h-full cursor-pointer" onClick={() => {
-                    const videoElement = document.createElement('video');
-                    videoElement.src = video.videoUrl;
-                    videoElement.controls = true;
-                    videoElement.autoplay = true;
-                    videoElement.style.width = '100%';
-                    videoElement.style.height = '100%';
-                    videoElement.style.objectFit = 'cover';
-                    
-                    const modal = document.createElement('div');
-                    modal.style.position = 'fixed';
-                    modal.style.top = '0';
-                    modal.style.left = '0';
-                    modal.style.width = '100%';
-                    modal.style.height = '100%';
-                    modal.style.backgroundColor = 'rgba(0,0,0,0.9)';
-                    modal.style.zIndex = '9999';
-                    modal.style.display = 'flex';
-                    modal.style.alignItems = 'center';
-                    modal.style.justifyContent = 'center';
-                    modal.onclick = () => document.body.removeChild(modal);
-                    
-                    const closeButton = document.createElement('button');
-                    closeButton.innerHTML = '✕';
-                    closeButton.style.position = 'absolute';
-                    closeButton.style.top = '20px';
-                    closeButton.style.right = '20px';
-                    closeButton.style.background = 'rgba(255,255,255,0.2)';
-                    closeButton.style.border = 'none';
-                    closeButton.style.color = 'white';
-                    closeButton.style.fontSize = '24px';
-                    closeButton.style.width = '40px';
-                    closeButton.style.height = '40px';
-                    closeButton.style.borderRadius = '50%';
-                    closeButton.style.cursor = 'pointer';
-                    closeButton.style.zIndex = '10000';
-                    closeButton.onclick = (e) => {
-                      e.stopPropagation();
-                      document.body.removeChild(modal);
-                    };
-                    
-                    modal.appendChild(videoElement);
-                    modal.appendChild(closeButton);
-                    document.body.appendChild(modal);
-                  }}>
-                    {/* thumbnail */}
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={video.thumbnail}
-                        alt={video.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-
-                    {/* overlay gradient */}
-                    <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-all duration-300"
-                      aria-hidden
+                  <div className="block w-full h-full relative">
+                    <video 
+                      src={video.videoUrl}
+                      controls
+                      className="w-full h-full object-cover"
+                      poster={video.thumbnail}
                     />
-
-                    {/* play button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                        <div className="w-0 h-0 border-l-[14px] xs:border-l-[16px] sm:border-l-[20px] border-l-white border-t-[8px] xs:border-t-[10px] sm:border-t-[12px] border-t-transparent border-b-[8px] xs:border-b-[10px] sm:border-b-[12px] border-b-transparent ml-1"></div>
-                      </div>
-                    </div>
-
-                    {/* title */}
-                    <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4">
+                    
+                    <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4 bg-black/50 rounded px-2 py-1">
                       <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
                     </div>
                   </div>
