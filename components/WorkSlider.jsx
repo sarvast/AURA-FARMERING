@@ -129,7 +129,27 @@ const WorkSlider = () => {
                     modal.style.justifyContent = 'center';
                     modal.onclick = () => document.body.removeChild(modal);
                     
+                    const closeButton = document.createElement('button');
+                    closeButton.innerHTML = '✕';
+                    closeButton.style.position = 'absolute';
+                    closeButton.style.top = '20px';
+                    closeButton.style.right = '20px';
+                    closeButton.style.background = 'rgba(255,255,255,0.2)';
+                    closeButton.style.border = 'none';
+                    closeButton.style.color = 'white';
+                    closeButton.style.fontSize = '24px';
+                    closeButton.style.width = '40px';
+                    closeButton.style.height = '40px';
+                    closeButton.style.borderRadius = '50%';
+                    closeButton.style.cursor = 'pointer';
+                    closeButton.style.zIndex = '10000';
+                    closeButton.onclick = (e) => {
+                      e.stopPropagation();
+                      document.body.removeChild(modal);
+                    };
+                    
                     modal.appendChild(videoElement);
+                    modal.appendChild(closeButton);
                     document.body.appendChild(modal);
                   }}>
                     {/* thumbnail */}
