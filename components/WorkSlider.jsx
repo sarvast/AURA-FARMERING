@@ -132,6 +132,34 @@ const WorkSlider = () => {
                     modal.appendChild(videoElement);
                     document.body.appendChild(modal);
                   }}>
+                    {/* thumbnail */}
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={video.thumbnail}
+                        alt={video.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+
+                    {/* overlay gradient */}
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-all duration-300"
+                      aria-hidden
+                    />
+
+                    {/* play button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                        <div className="w-0 h-0 border-l-[14px] xs:border-l-[16px] sm:border-l-[20px] border-l-white border-t-[8px] xs:border-t-[10px] sm:border-t-[12px] border-t-transparent border-b-[8px] xs:border-b-[10px] sm:border-b-[12px] border-b-transparent ml-1"></div>
+                      </div>
+                    </div>
+
+                    {/* title */}
+                    <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4">
+                      <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
+                    </div>
+                  </div>
                 ) : (
                   <Link
                     href={video.videoUrl}
@@ -139,37 +167,33 @@ const WorkSlider = () => {
                     rel="noreferrer noopener"
                     className="block w-full h-full"
                   >
-                )}
-                  {/* thumbnail */}
-                  <div className="relative w-full h-full">
-                    <Image
-                      src={video.thumbnail}
-                      alt={video.title}
-                      fill
-                      className="object-cover"
-                    />
-                  </div>
-
-                  {/* overlay gradient */}
-                  <div
-                    className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-all duration-300"
-                    aria-hidden
-                  />
-
-                  {/* play button */}
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                      <div className="w-0 h-0 border-l-[14px] xs:border-l-[16px] sm:border-l-[20px] border-l-white border-t-[8px] xs:border-t-[10px] sm:border-t-[12px] border-t-transparent border-b-[8px] xs:border-b-[10px] sm:border-b-[12px] border-b-transparent ml-1"></div>
+                    {/* thumbnail */}
+                    <div className="relative w-full h-full">
+                      <Image
+                        src={video.thumbnail}
+                        alt={video.title}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
-                  </div>
 
-                  {/* title */}
-                  <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4">
-                    <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
-                  </div>
-                {video.isLocalVideo ? (
-                  </div>
-                ) : (
+                    {/* overlay gradient */}
+                    <div
+                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-all duration-300"
+                      aria-hidden
+                    />
+
+                    {/* play button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all duration-300">
+                        <div className="w-0 h-0 border-l-[14px] xs:border-l-[16px] sm:border-l-[20px] border-l-white border-t-[8px] xs:border-t-[10px] sm:border-t-[12px] border-t-transparent border-b-[8px] xs:border-b-[10px] sm:border-b-[12px] border-b-transparent ml-1"></div>
+                      </div>
+                    </div>
+
+                    {/* title */}
+                    <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4">
+                      <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
+                    </div>
                   </Link>
                 )}
               </div>
