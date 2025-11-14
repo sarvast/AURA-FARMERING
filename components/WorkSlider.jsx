@@ -115,7 +115,13 @@ const WorkSlider = () => {
                       controls
                       className="w-full h-full object-cover"
                       poster={video.thumbnail}
-                    />
+                      preload="metadata"
+                      onError={(e) => console.error('Video error:', e)}
+                      onLoadStart={() => console.log('Video loading started')}
+                    >
+                      <source src={video.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
                     
                     <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4 bg-black/50 rounded px-2 py-1">
                       <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
