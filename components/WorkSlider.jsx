@@ -15,7 +15,7 @@ const workSlides = {
         {
           title: "Explore the Ladakh",
           thumbnail: "/explore the laddakh thumbnail.jpg",
-          videoUrl: "/Explore the laddakh.mp4",
+          videoUrl: "/explore.mp4",
           isLocalVideo: true,
         },
       ],
@@ -104,11 +104,7 @@ const WorkSlider = () => {
           <div className="flex items-center justify-center h-full">
             {slide.videos.map((video, videoI) => (
               <div
-                className={`relative rounded-lg overflow-hidden group w-full mx-auto shadow-xl video-card ${
-                  video.isLocalVideo 
-                    ? 'max-w-[264px] xs:max-w-[288px] sm:max-w-[336px] md:max-w-[360px] lg:max-w-[384px] xl:max-w-[408px] 2xl:max-w-[456px]'
-                    : 'max-w-[220px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[320px] xl:max-w-[340px] 2xl:max-w-[380px]'
-                }`}
+                className="relative rounded-lg overflow-hidden group w-full max-w-[220px] xs:max-w-[240px] sm:max-w-[280px] md:max-w-[300px] lg:max-w-[320px] xl:max-w-[340px] 2xl:max-w-[380px] mx-auto shadow-xl video-card"
                 key={videoI}
                 style={{ aspectRatio: video.isLocalVideo ? '16/9' : '9/16' }}
               >
