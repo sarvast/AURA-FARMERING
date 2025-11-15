@@ -1,4 +1,4 @@
-# AURA FARMERING
+# SUNNY EDITORX
 
 🎬 **Professional Video Editor Portfolio Website**
 
@@ -111,7 +111,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 - **Email**: aura.farmering@example.com
 - **GitHub**: [@sarvast](https://github.com/sarvast)
-- **Website**: [AURA FARMERING](https://aura-farmering.vercel.app/)
+- **Website**: [SUNNY EDITORX](https://aura-farmering.vercel.app/)
 
 ---
 

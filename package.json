@@ -1,12 +1,12 @@
 {
-  "name": "aura-farmering-video-editor",
+  "name": "sunny-editorx-video-editor",
   "version": "1.0.0",
   "private": true,
   "author": {
-    "name": "AURA FARMERING",
-    "email": "aura.farmering@example.com"
+    "name": "SUNNY EDITORX",
+    "email": "sunny.editorx@example.com"
   },
-  "description": "AURA FARMERING - Professional Video Editor for Instagram and YouTube Shorts",
+  "description": "SUNNY EDITORX - Professional Video Editor for Instagram and YouTube Shorts",
   "keywords": [
     "video-editing",
     "instagram-reels",

@@ -1,4 +1,4 @@
-# AURA FARMERING - Video Editor Portfolio Website
+# SUNNY EDITORX - Video Editor Portfolio Website
 
 ## 🎬 Project Overview
 
@@ -7,7 +7,7 @@ This is a modern, responsive portfolio website built for video editors specializ
 
 
 ## 🚀 Live Demo
-- **Website**: [AURA FARMERING Portfolio](https://aura-farmering.vercel.app/)
+- **Website**: [SUNNY EDITORX Portfolio](https://aura-farmering.vercel.app/)
 - **GitHub**: [Repository Link](https://github.com/sarvast/AURA-FARMERING)
 
 ---
@@ -459,10 +459,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact & Support
 
-- **Developer**: AURA FARMERING Team
+- **Developer**: SUNNY EDITORX Team
 - **Email**: aura.farmering@example.com
 - **GitHub**: [@sarvast](https://github.com/sarvast)
-- **Website**: [AURA FARMERING](https://aura-farmering.vercel.app/)
+- **Website**: [SUNNY EDITORX](https://aura-farmering.vercel.app/)
 
 ---
 

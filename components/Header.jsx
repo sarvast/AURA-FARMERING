@@ -17,7 +17,7 @@ const Header = () => {
           {/* logo */}
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <div className="text-xl sm:text-2xl md:text-2xl lg:text-2xl font-bold text-white whitespace-nowrap">
-              AURA <span className="text-accent">FARMERING</span>
+              SUNNY <span className="text-accent">EDITORX</span>
             </div>
           </Link>
 
