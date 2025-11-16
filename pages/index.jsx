@@ -8,10 +8,10 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 min-h-screen xl:h-screen">
+    <div className="bg-primary/60 h-screen overflow-hidden">
       {/* text */}
-      <div className="w-full min-h-screen xl:h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-        <div className="text-center flex flex-col justify-center px-4 sm:px-6 md:px-8 pt-24 pb-32 sm:pt-28 sm:pb-36 md:pt-32 md:pb-40 xl:pt-40 xl:pb-0 xl:text-left min-h-screen xl:h-full container mx-auto max-w-7xl">
+      <div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+        <div className="text-center flex flex-col justify-center px-4 sm:px-6 md:px-8 pt-16 sm:pt-20 md:pt-24 xl:pt-32 xl:text-left h-full container mx-auto max-w-7xl">
           {/* title */}
           <motion.h1
             variants={fadeIn("down", 0.2)}

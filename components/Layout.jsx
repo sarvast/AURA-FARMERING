@@ -1,5 +1,7 @@
 import { Sora } from "next/font/google";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 import Header from "../components/Header";
 import Nav from "../components/Nav";
@@ -13,6 +15,20 @@ const sora = Sora({
 });
 
 const Layout = ({ children }) => {
+  const router = useRouter();
+  
+  useEffect(() => {
+    if (router.pathname === '/') {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+    
+    return () => {
+      document.body.classList.remove('no-scroll');
+    };
+  }, [router.pathname]);
+  
   return (
     <main
       className={`page bg-site text-white bg-cover bg-no-repeat ${sora.variable} font-sora relative`}
