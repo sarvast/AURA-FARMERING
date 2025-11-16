@@ -10,7 +10,7 @@ import {
 export const socialData = [
   {
     name: "Instagram",
-    link: "https://www.instagram.com/aura_farmering_",
+    link: "https://www.instagram.com/sunny_editorax",
     Icon: RiInstagramLine,
   },
   {
