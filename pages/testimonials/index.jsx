@@ -14,7 +14,7 @@ const Testimonials = () => {
           exit="hidden"
           className="h2 mb-6 sm:mb-8 md:mb-10 xl:mb-0 px-4"
         >
-          What clients <span className="text-accent">say.</span>
+          Client <span className="text-accent">Reviews.</span>
         </motion.h2>
 
         {/* slider */}

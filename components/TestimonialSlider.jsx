@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
-import { Navigation, Pagination } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
@@ -10,24 +10,24 @@ import "swiper/css/pagination";
 const testimonialData = [
   {
     image: "/t-avt-1.png",
-    name: "SUNNY EDITORX",
-    position: "Customer",
+    name: "Priya Sharma",
+    position: "Content Creator",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Amazing work! My Instagram Reels got 10x more engagement after Sunny edited them.",
   },
   {
     image: "/t-avt-2.png",
-    name: "SUNNY EDITORX",
-    position: "Customer",
+    name: "Rahul Gupta",
+    position: "YouTuber",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Best video editor I've worked with! My YouTube Shorts are now getting viral views.",
   },
   {
     image: "/t-avt-3.png",
-    name: "SUNNY EDITORX",
-    position: "Customer",
+    name: "Anjali Patel",
+    position: "Brand Manager",
     message:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum expedita odit beatae, cupiditate saepe quam officia aut placeat quas neque!",
+      "Sunny transformed our raw footage into stunning promotional videos perfectly.",
   },
 ];
 
@@ -35,10 +35,7 @@ const TestimonialSlider = () => {
   return (
     <Swiper
       navigation
-      pagination={{
-        clickable: true,
-      }}
-      modules={[Navigation, Pagination]}
+      modules={[Navigation]}
       className="h-[400px]"
     >
       {testimonialData.map((person, i) => (
