@@ -13,10 +13,10 @@ const workSlides = {
     {
       videos: [
         {
-          title: "Explore the Ladakh",
+          title: "",
           thumbnail: "/explore the laddakh thumbnail.jpg",
-          videoUrl: "/Explore the laddakh.mp4",
-          isLocalVideo: true,
+          videoUrl: "https://www.youtube.com/embed/5C7Pkk8w9Uk?rel=0&modestbranding=1",
+          isLocalVideo: false,
         },
       ],
     },
@@ -122,46 +122,18 @@ const WorkSlider = () => {
                       <source src={video.videoUrl} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
-                    
-                    <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4 bg-black/50 rounded px-2 py-1">
-                      <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
-                    </div>
                   </div>
                 ) : (
-                  <Link
-                    href={video.videoUrl}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="block w-full h-full"
-                  >
-                    {/* thumbnail */}
-                    <div className="relative w-full h-full">
-                      <Image
-                        src={video.thumbnail}
-                        alt={video.title}
-                        fill
-                        className="object-cover"
-                      />
-                    </div>
-
-                    {/* overlay gradient */}
-                    <div
-                      className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60 group-hover:opacity-90 transition-all duration-300"
-                      aria-hidden
+                  <div className="block w-full h-full relative">
+                    <iframe
+                      src={video.videoUrl}
+                      title={video.title}
+                      className="w-full h-full"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
                     />
-
-                    {/* play button */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-12 h-12 xs:w-14 xs:h-14 sm:w-16 sm:h-16 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center group-hover:scale-110 transition-all duration-300">
-                        <div className="w-0 h-0 border-l-[14px] xs:border-l-[16px] sm:border-l-[20px] border-l-white border-t-[8px] xs:border-t-[10px] sm:border-t-[12px] border-t-transparent border-b-[8px] xs:border-b-[10px] sm:border-b-[12px] border-b-transparent ml-1"></div>
-                      </div>
-                    </div>
-
-                    {/* title */}
-                    <div className="absolute bottom-3 xs:bottom-4 left-3 xs:left-4 right-3 xs:right-4">
-                      <p className="text-white font-semibold text-xs xs:text-sm truncate">{video.title}</p>
-                    </div>
-                  </Link>
+                  </div>
                 )}
               </div>
             ))}
