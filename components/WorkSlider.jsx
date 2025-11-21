@@ -15,7 +15,7 @@ const workSlides = {
         {
           title: "",
           thumbnail: "/explore the laddakh thumbnail.jpg",
-          videoUrl: "https://www.youtube.com/embed/5C7Pkk8w9Uk?rel=0&modestbranding=1",
+          videoUrl: "https://www.youtube.com/embed/5C7Pkk8w9Uk?rel=0&modestbranding=1&hd=1&vq=hd1080&quality=hd1080&autoplay=0&controls=1&showinfo=0",
           isLocalVideo: false,
         },
       ],

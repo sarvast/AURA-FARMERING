@@ -10,13 +10,13 @@ const getYouTubeEmbedUrl = (url) => {
     // handle youtu.be short links
     if (url.includes('youtu.be')) {
       const id = url.split('/').pop().split('?')[0];
-      return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1`;
+      return `https://www.youtube.com/embed/${id}?rel=0&modestbranding=1&hd=1&vq=hd1080&quality=hd1080&autoplay=0&controls=1&showinfo=0`;
     }
 
     // handle youtube.com links and extract v= param
     const parsed = new URL(url, 'https://example.com');
     const v = parsed.searchParams.get('v');
-    if (v) return `https://www.youtube.com/embed/${v}?rel=0&modestbranding=1`;
+    if (v) return `https://www.youtube.com/embed/${v}?rel=0&modestbranding=1&hd=1&vq=hd1080&quality=hd1080&autoplay=0&controls=1&showinfo=0`;
 
     // fallback: return original
     return url;
